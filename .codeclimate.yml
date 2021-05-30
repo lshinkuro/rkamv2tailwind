@@ -1,0 +1,42 @@
+version: "2"
+checks:
+  argument-count:
+    enabled: true
+    config:
+      threshold: 4
+  complex-logic:
+    enabled: true
+    config:
+      threshold: 4
+  file-lines:
+    enabled: false
+  method-lines:
+    enabled: false
+  method-complexity:
+    enabled: false
+    
+plugins: 
+  nodesecurity:
+    enabled: false
+  csslint:
+    enabled: false
+  eslint:
+    enabled: true
+    channel: "eslint-7"
+  scss-lint:
+    enabled: false
+  sass-lint:
+    enabled: true
+  
+exclude_patterns:
+- "config/"
+- "db/"
+- "dist/"
+- "features/"
+- "**/node_modules/"
+- "script/"
+- "**/spec/"
+- "**/test/"
+- "**/tests/"
+- "**/vendor/"
+- "**/*.d.ts"  

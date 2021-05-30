@@ -1,0 +1,118 @@
+{
+  "name": "rkam-v2-semi-online",
+  "version": "0.4.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "tailwind:dev": "tailwindcss build src/assets/css/tailwind.css -o src/assets/css/tailwind.output.css",
+    "tailwind:build": "cross-env NODE_ENV=production postcss src/assets/css/tailwind.css -o src/assets/css/tailwind.output.css",
+    "prestart": "npm run tailwind:dev",
+    "dev": "BROWSER=none PORT=8080 react-scripts start",
+    "prebuild": "npm run tailwind:build",
+    "build": "react-scripts build",
+    "start": "serve -s build",
+    "cz": "git-cz",
+    "release": "release-it",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@heroicons/react": "^1.0.1",
+    "@react-pdf-viewer/core": "2.4.3",
+    "@testing-library/jest-dom": "4.2.4",
+    "@testing-library/react": "9.5.0",
+    "@testing-library/user-event": "7.2.1",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14.41",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@windmill/react-ui": "^0.4.0-beta.0",
+    "axios": "^0.21.1",
+    "build": "^0.1.4",
+    "chart.js": "2.9.3",
+    "classnames": "2.2.6",
+    "faker": "4.1.0",
+    "file-saver": "^2.0.5",
+    "js-cookie": "^2.2.1",
+    "pdfjs-dist": "2.6.347",
+    "query-string": "^7.0.0",
+    "react": "^16.13.1",
+    "react-chartjs-2": "2.9.0",
+    "react-data-table-component": "^6.11.7",
+    "react-data-table-component-extensions": "^1.5.2",
+    "react-datepicker": "^3.7.0",
+    "react-detect-offline": "^2.4.3",
+    "react-dom": "^16.13.1",
+    "react-focus-lock": "2.4.0",
+    "react-form-stepper": "^1.4.1",
+    "react-multi-select-component": "^4.0.1",
+    "react-number-format": "^4.5.5",
+    "react-pdf": "^5.3.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-select": "^4.3.0",
+    "react-toastify": "^7.0.4",
+    "react-transition-group": "4.4.1",
+    "serve": "^11.3.2",
+    "styled-components": "^5.2.3",
+    "typescript": "^3.2.1",
+    "xlsx": "^0.16.9"
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "1.1.4",
+    "@svgr/webpack": "5.4.0",
+    "@types/file-saver": "^2.0.2",
+    "@types/query-string": "^6.3.0",
+    "@types/react-datepicker": "^3.1.8",
+    "@types/react-router-dom": "^5.1.7",
+    "autoprefixer": "9.8.0",
+    "commitizen": "4.1.2",
+    "cross-env": "7.0.2",
+    "cssnano": "4.1.10",
+    "cz-conventional-changelog": "3.2.0",
+    "postcss-cli": "7.1.1",
+    "react-axe": "3.5.2",
+    "release-it": "13.6.4",
+    "tailwindcss": "1.4.6"
+  },
+  "keywords": [],
+  "release-it": {
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md"
+      }
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
